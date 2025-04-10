@@ -113,4 +113,3 @@ void liberarCardapio(Cardapio* cardapio){
         free(temp);
     }
     free(cardapio);
-}
