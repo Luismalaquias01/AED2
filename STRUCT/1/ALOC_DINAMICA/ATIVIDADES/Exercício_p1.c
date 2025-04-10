@@ -63,7 +63,7 @@ void listarLivros(Livro *livros, int totalLivros){
 Livro* buscarLivroPorTitulo(Livro *livros, int totalLivros, char buscado[]){
     for(int i = 0; i < totalLivros; i++){
         if (strcmp(buscado, livros[i].titulo) == 0) {
-            return &livros[i]; // retorna ponteiro para o livro encontrado
+            return &livros[i]; 
         }
     }
     return NULL;
