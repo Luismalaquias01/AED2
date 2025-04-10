@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cardapio.h"
+#include "cardapio.c"
 
 int main() {
     Cardapio* cardapio = criarCardapio();
@@ -48,7 +48,7 @@ int main() {
                 listarCardapio(cardapio);
                 break;
 
-                case 4:
+            case 4:
                 printf("ID do item a buscar: ");
                 scanf("%d", &id);
                 getchar(); // limpa o \n do buffer
@@ -64,7 +64,7 @@ int main() {
                 break;
             
             case 5:
-                cardapio_destruir(cardapio);
+                liberarCardapio(cardapio);
                 printf("Encerrando o sistema...\n");
                 break;
 
