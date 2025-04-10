@@ -66,7 +66,7 @@ void removerItem(Cardapio* cardapio, char nome[]){
     printf("item '%s' removido do cardapio\n", nome);
 }
  
-    //listar todos os itens do cardapio 
+//    listar todos os itens do cardapio 
 void listarCardapio(Cardapio* cardapio){
     struct Item* atual = cardapio->inicio;
     if(!atual){
@@ -84,24 +84,26 @@ void listarCardapio(Cardapio* cardapio){
 
 
 // buscar proço de um  item 
-float buscarPreco(Cardapio* cardapio, char nome[]){
+float cardapio_obter_preco(Cardapio* cardapio, int id) {
     struct Item* atual = cardapio->inicio;
-
-    while(atual){
-        if(strcmp(atual->nome, nome) == 0){
+    while (atual) {
+        if (atual->id == id) {
             return atual->preco;
         }
         atual = atual->prox;
     }
-
-    return -1; //Indica que o item não foi encontrado
+    return -1; // Item não encontrado
 }
 
-// liberar a memoria do cardapio 
+char* cardapio_obter_nome(Cardapio* cardapio, int id) {
+    struct Item* atual = cardapio->inicio;
+    while (atual) {
+        if (atual->id == id) return atual->nome;
+        atual = atual->prox;
+    }
+    return NULL;
+}
 
-
-
-//liberar a memória do cardapio 
 void liberarCardapio(Cardapio* cardapio){
     struct Item* atual = cardapio->inicio;
 

@@ -10,6 +10,8 @@ void adicionarItem(Cardapio* cardapio, int id, char nome[], float preco);
 void removerItem(Cardapio* cardapio, char nome[]);
 void listarCardapio(Cardapio* cardapio);
 void liberarCardapio(Cardapio* cardapio);
-float buscarPreco(Cardapio* cardapio, char nome[]);
+char* cardapio_obter_nome(Cardapio* cardapio, int id);
+float cardapio_obter_preco(Cardapio* cardapio, int id);
+void cardapio_destruir(Cardapio* cardapio);
 
 #endif
