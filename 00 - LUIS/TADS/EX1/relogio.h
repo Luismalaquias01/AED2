@@ -9,10 +9,10 @@ typedef struct {
 
 Relogio* criarRelogio(int h, int m, int s);
 
-void incrementarSegundo(Relogio r);
+void incrementarSegundo(Relogio* r);
 
-void exibirHorario(Relogio r);
+void exibirHorario(Relogio* r);
 
-void destruirRelogio();
+void destruirRelogio(Relogio* r);
 
 #endif
